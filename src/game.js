@@ -3,9 +3,11 @@ function game() {
     this.gameBoard = [];
 
     this.playOnPosition = function (position) {
+        if(this.gameBoard[position]){
+            return;
+        }
         this.gameBoard[position] = this.currentPlayer;
         switchPlayer();
-
 
     }
 

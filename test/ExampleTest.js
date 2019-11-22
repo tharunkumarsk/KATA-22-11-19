@@ -26,4 +26,12 @@ describe('Game', function () {
         assert.equal(game.currentPlayer,"O")
     });
    
+    it('Should not allow to play on played positions', function(){
+        game.playOnPosition(8);
+        game.playOnPosition(8);
+
+        assert.equal(game.currentPlayer,"O")
+        assert.equal(game.gameBoard[8],"X")
+    });
+   
 });
