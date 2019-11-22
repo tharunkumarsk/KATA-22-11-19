@@ -1,9 +1,11 @@
 function game() {
     this.currentPlayer = "X";
+   
+
     this.gameBoard = [];
 
     this.playOnPosition = function (position) {
-        if(this.gameBoard[position]){
+        if(this.gameBoard[position] || position > 8){
             return;
         }
         this.gameBoard[position] = this.currentPlayer;

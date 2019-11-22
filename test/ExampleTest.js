@@ -33,5 +33,14 @@ describe('Game', function () {
         assert.equal(game.currentPlayer,"O")
         assert.equal(game.gameBoard[8],"X")
     });
+
+    it('should not allow to play on invalid positions', function(){
+        game.playOnPosition(5);
+        game.playOnPosition(9);
+
+        assert.equal(game.currentPlayer,"O")
+        assert.equal(game.gameBoard.length,6)
+    });
+
    
 });
