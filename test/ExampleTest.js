@@ -9,5 +9,12 @@ describe('Game', function () {
         assert.equal(game.currentPlayer ,"X")
     });
 
+    it('should record X move on the board on correct position', function(){
+        var game = new Game();
+        
+        game.play("X", 8);
+
+        assert.equal(game.gameBoard[8], 'X');
+    });
    
 });
