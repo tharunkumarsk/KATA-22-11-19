@@ -15,13 +15,13 @@ describe('Game', function () {
     });
 
     it('should record X move on the board on correct position', function(){
-        game.play("X", 8);
+        game.playOnPosition(8);
 
         assert.equal(game.gameBoard[8], 'X');
     });
 
     it('Should "O" be the next player after X', function(){
-        game.play("X", 8);
+        game.playOnPosition(8);
 
         assert.equal(game.currentPlayer,"O")
     });

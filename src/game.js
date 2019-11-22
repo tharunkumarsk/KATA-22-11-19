@@ -2,8 +2,8 @@ function game(){
     this.currentPlayer = "X";
     this.gameBoard = [];
 
-    this.play = function (player, position){
-        this.gameBoard[position] = player;
+    this.playOnPosition = function (position){
+        this.gameBoard[position] = this.currentPlayer;
 
         this.currentPlayer = this.currentPlayer === "X" ? "O" : "X";
     }
