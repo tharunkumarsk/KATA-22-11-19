@@ -16,5 +16,13 @@ describe('Game', function () {
 
         assert.equal(game.gameBoard[8], 'X');
     });
+
+    it('Should "O" be the next player after X', function(){
+        var game = new Game();
+
+        game.play("X", 8);
+
+        assert.equal(game.currentPlayer,"O")
+    });
    
 });

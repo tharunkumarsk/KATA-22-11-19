@@ -4,6 +4,8 @@ function game(){
 
     this.play = function (player, position){
         this.gameBoard[position] = player;
+
+        this.currentPlayer = this.currentPlayer === "X" ? "O" : "X";
     }
 
 
